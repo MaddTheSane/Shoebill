@@ -89,7 +89,7 @@
 {
     // Convert the cocoa window frame to quartz global coordinates
     NSRect winrect = [self frame];
-    NSScreen *mainScreen = (NSScreen*)[[NSScreen screens] objectAtIndex:0];
+    NSScreen *mainScreen = (NSScreen*)[NSScreen screens][0];
     winrect.origin.y = NSMaxY([mainScreen frame]) - NSMaxY(winrect);
     CGRect cgwinrect = NSRectToCGRect(winrect);
     

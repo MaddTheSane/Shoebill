@@ -25,14 +25,26 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface shoePreferencesWindowController : NSWindowController {
+@interface shoePreferencesWindowController : NSWindowController
 
-    IBOutlet __weak NSButton *apply, *cancel, *applyAndRun, *verbose;
-    IBOutlet __weak NSTextField *kernelPath, *romPath, *memorySize;
-    IBOutlet __weak NSTextField *scsiPath0, *scsiPath1, *scsiPath2, *scsiPath3, *scsiPath4, *scsiPath5, *scsiPath6;
-    IBOutlet __weak NSTextField *screenHeight, *screenWidth;
-}
+@property (weak) IBOutlet NSButton *apply;
+@property (weak) IBOutlet NSButton *cancel;
+@property (weak) IBOutlet NSButton *applyAndRun;
+@property (weak) IBOutlet NSButton *verbose;
+@property (weak) IBOutlet NSTextField *kernelPath;
+@property (weak) IBOutlet NSTextField *romPath;
+@property (weak) IBOutlet NSTextField *memorySize;
 
+@property (weak) IBOutlet NSTextField *scsiPath0;
+@property (weak) IBOutlet NSTextField *scsiPath1;
+@property (weak) IBOutlet NSTextField *scsiPath2;
+@property (weak) IBOutlet NSTextField *scsiPath3;
+@property (weak) IBOutlet NSTextField *scsiPath4;
+@property (weak) IBOutlet NSTextField *scsiPath5;
+@property (weak) IBOutlet NSTextField *scsiPath6;
+
+@property (weak) IBOutlet NSTextField *screenHeight;
+@property (weak) IBOutlet NSTextField *screenWidth;
 
 - (IBAction)applyPressed:(id)sender;
 - (IBAction)cancelPressed:(id)sender;

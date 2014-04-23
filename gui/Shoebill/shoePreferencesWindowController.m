@@ -27,6 +27,22 @@
 #import "shoeApplication.h"
 
 @implementation shoePreferencesWindowController
+@synthesize apply;
+@synthesize applyAndRun;
+@synthesize cancel;
+@synthesize kernelPath;
+@synthesize memorySize;
+@synthesize romPath;
+@synthesize screenHeight;
+@synthesize screenWidth;
+@synthesize scsiPath0;
+@synthesize scsiPath1;
+@synthesize scsiPath2;
+@synthesize scsiPath3;
+@synthesize scsiPath4;
+@synthesize scsiPath5;
+@synthesize scsiPath6;
+@synthesize verbose;
 
 - (id) init
 {
@@ -58,18 +74,27 @@
     NSString *scsiPath5Str = [defaults objectForKey:@"scsiPath5"];
     NSString *scsiPath6Str = [defaults objectForKey:@"scsiPath6"];
 
-    if (romPath) [romPath setStringValue:romPathStr];
-    if (kernelPath) [kernelPath setStringValue:rootKernelPathStr];
+    if (romPath)
+		[romPath setStringValue:romPathStr];
+    if (kernelPath)
+		[kernelPath setStringValue:rootKernelPathStr];
     [verbose setState:verboseState];
     [memorySize setStringValue:[NSString stringWithFormat:@"%u", (uint32_t)memsize]];
     
-    if (scsiPath0Str) [scsiPath0 setStringValue:scsiPath0Str];
-    if (scsiPath1Str) [scsiPath1 setStringValue:scsiPath1Str];
-    if (scsiPath2Str) [scsiPath2 setStringValue:scsiPath2Str];
-    if (scsiPath3Str) [scsiPath3 setStringValue:scsiPath3Str];
-    if (scsiPath4Str) [scsiPath4 setStringValue:scsiPath4Str];
-    if (scsiPath5Str) [scsiPath5 setStringValue:scsiPath5Str];
-    if (scsiPath6Str) [scsiPath6 setStringValue:scsiPath6Str];
+    if (scsiPath0Str)
+		[scsiPath0 setStringValue:scsiPath0Str];
+    if (scsiPath1Str)
+		[scsiPath1 setStringValue:scsiPath1Str];
+    if (scsiPath2Str)
+		[scsiPath2 setStringValue:scsiPath2Str];
+    if (scsiPath3Str)
+		[scsiPath3 setStringValue:scsiPath3Str];
+    if (scsiPath4Str)
+		[scsiPath4 setStringValue:scsiPath4Str];
+    if (scsiPath5Str)
+		[scsiPath5 setStringValue:scsiPath5Str];
+    if (scsiPath6Str)
+		[scsiPath6 setStringValue:scsiPath6Str];
     
     NSInteger screenHeightValue = [defaults integerForKey:@"screenHeight"];
     NSInteger screenWidthValue = [defaults integerForKey:@"screenWidth"];
@@ -105,7 +130,7 @@
     if ([urls count] != 1)
         return ;
     
-    NSURL *url = [urls objectAtIndex:0];
+    NSURL *url = urls[0];
     if (![url isFileURL])
         return ;
     
