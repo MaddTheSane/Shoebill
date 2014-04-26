@@ -35,11 +35,11 @@
 		5548582C190C49F60017BB41 /* mc68851.post in Sources */ = {isa = PBXBuildFile; fileRef = 554857D9190C3AD50017BB41 /* mc68851.post */; };
 		5548582D190C4A060017BB41 /* mem.post in Sources */ = {isa = PBXBuildFile; fileRef = 554857DB190C3AD50017BB41 /* mem.post */; };
 		5548582E190C4A140017BB41 /* via.post in Sources */ = {isa = PBXBuildFile; fileRef = 554857E2190C3AD50017BB41 /* via.post */; };
+		5548582F190C4D630017BB41 /* shoePreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55485831190C4D630017BB41 /* shoePreferencesWindowController.xib */; };
 		87495445189980E200E80F5B /* shoeScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87495444189980E200E80F5B /* shoeScreenView.xib */; };
 		8749544718999F5300E80F5B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8749544618999F5300E80F5B /* OpenGL.framework */; };
 		874954491899A22D00E80F5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874954481899A22D00E80F5B /* QuartzCore.framework */; };
 		8781D24C18A19C340016F604 /* shoePreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8781D24A18A19C340016F604 /* shoePreferencesWindowController.m */; };
-		8781D24D18A19C340016F604 /* shoePreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8781D24B18A19C340016F604 /* shoePreferencesWindowController.xib */; };
 		8782FCE4189AFEFB0081E19E /* shoeApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8782FCE3189AFEFB0081E19E /* shoeApplication.m */; };
 		87F9772C18987700000D589E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F9772B18987700000D589E /* Cocoa.framework */; };
 		87F9773618987700000D589E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87F9773418987700000D589E /* InfoPlist.strings */; };
@@ -59,10 +59,11 @@
 			filePatterns = "*.post";
 			fileType = pattern.proxy;
 			isEditable = 1;
+			name = "Preprocess files";
 			outputFiles = (
 				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).c",
 			);
-			script = "perl ${PROJECT_DIR}/../core/macro.pl ${INPUT_FILE_PATH} ${DERIVED_FILE_DIR}/${INPUT_FILE_BASE}.c ;";
+			script = "perl ${PROJECT_DIR}/../core/macro.pl ${INPUT_FILE_PATH} ${DERIVED_FILE_DIR}/${INPUT_FILE_BASE}.c";
 		};
 /* End PBXBuildRule section */
 
@@ -121,12 +122,12 @@
 		554857EA190C3AD50017BB41 /* shoebill_video_primary_init.a */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; path = shoebill_video_primary_init.a; sourceTree = "<group>"; };
 		554857EB190C3AD50017BB41 /* shoebill_video_rom.a */ = {isa = PBXFileReference; explicitFileType = sourcecode.asm; path = shoebill_video_rom.a; sourceTree = "<group>"; };
 		5548581C190C42A40017BB41 /* decoder_gen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = decoder_gen; sourceTree = BUILT_PRODUCTS_DIR; };
+		55485830190C4D630017BB41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/shoePreferencesWindowController.xib; sourceTree = "<group>"; };
 		87495444189980E200E80F5B /* shoeScreenView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = shoeScreenView.xib; sourceTree = "<group>"; };
 		8749544618999F5300E80F5B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		874954481899A22D00E80F5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
 		8781D24918A19C340016F604 /* shoePreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shoePreferencesWindowController.h; sourceTree = "<group>"; };
 		8781D24A18A19C340016F604 /* shoePreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shoePreferencesWindowController.m; sourceTree = "<group>"; };
-		8781D24B18A19C340016F604 /* shoePreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = shoePreferencesWindowController.xib; sourceTree = "<group>"; };
 		8782FCE2189AFEFB0081E19E /* shoeApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shoeApplication.h; sourceTree = "<group>"; };
 		8782FCE3189AFEFB0081E19E /* shoeApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shoeApplication.m; sourceTree = "<group>"; };
 		87F9772818987700000D589E /* Shoebill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoebill.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,7 +284,7 @@
 				AE75B30818A8210D00E66DB6 /* shoeScreenWindow.m */,
 				87F9775F18987767000D589E /* shoeScreenView.h */,
 				87F9776018987767000D589E /* shoeScreenView.m */,
-				8781D24B18A19C340016F604 /* shoePreferencesWindowController.xib */,
+				55485831190C4D630017BB41 /* shoePreferencesWindowController.xib */,
 				8781D24918A19C340016F604 /* shoePreferencesWindowController.h */,
 				8781D24A18A19C340016F604 /* shoePreferencesWindowController.m */,
 				87F9773218987700000D589E /* Supporting Files */,
@@ -412,7 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8781D24D18A19C340016F604 /* shoePreferencesWindowController.xib in Resources */,
+				5548582F190C4D630017BB41 /* shoePreferencesWindowController.xib in Resources */,
 				87F9773618987700000D589E /* InfoPlist.strings in Resources */,
 				87F9774418987700000D589E /* Images.xcassets in Resources */,
 				87F9773C18987700000D589E /* Credits.rtf in Resources */,
@@ -508,6 +509,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		55485831190C4D630017BB41 /* shoePreferencesWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55485830190C4D630017BB41 /* Base */,
+			);
+			name = shoePreferencesWindowController.xib;
+			sourceTree = "<group>";
+		};
 		87F9773418987700000D589E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -540,17 +549,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -560,14 +565,14 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(inherited)",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -575,13 +580,11 @@
 		55485823190C42A40017BB41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_MODULES = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -589,9 +592,11 @@
 		55485824190C42A40017BB41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_ENABLE_MODULES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -631,7 +636,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Debug;
 		};
@@ -661,9 +665,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
-				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Release;
 		};
@@ -673,15 +677,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shoebill/Shoebill-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Shoebill/Shoebill-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					../intermediates,
-				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -694,14 +694,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_FAST_OBJC_DISPATCH = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shoebill/Shoebill-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Shoebill/Shoebill-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					../intermediates,
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
